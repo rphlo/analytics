@@ -54,6 +54,7 @@ plausible-report.xml
 *.iml
 *.log
 *.code-workspace
+browserstack.err
 
 # Dializer
 /priv/plts/*.plt
@@ -63,3 +64,6 @@ plausible-report.xml
 
 # Geolocation databases
 /priv/geodb/*.mmdb
+
+# static tracker files
+/priv/tracker/js/*.js
