@@ -82,8 +82,8 @@ defmodule PlausibleWeb.Router do
 
   scope "/api/v1/sites", PlausibleWeb.Api do
     pipe_through [:public_api, PlausibleWeb.AuthorizeSitesApiPlug]
-
     post "/", ExternalSitesController, :create_site
+    delete "/:site_id", ExternalSitesController, :delete_site
     put "/shared-links", ExternalSitesController, :find_or_create_shared_link
   end
 
