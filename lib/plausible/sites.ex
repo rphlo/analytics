@@ -152,4 +152,9 @@ defmodule Plausible.Sites do
     })
     |> Repo.insert()
   end
+
+  def delete!(site) do
+    Repo.delete!(site)
+    Plausible.ClickhouseRepo.clear_stats_for(site.domain)
+  end
 end
