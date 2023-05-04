@@ -34,7 +34,9 @@
     data-is-dbip="<%= @is_dbip %>"
     data-current-user-role="<%= @conn.assigns[:current_user_role] %>"
     data-flags="<%= Jason.encode!(@flags) %>"
-    data-valid-intervals-by-period="<%= Plausible.Stats.Interval.valid_by_period(site: @site) |> Jason.encode!() %>">
+    data-valid-intervals-by-period="<%= Plausible.Stats.Interval.valid_by_period(site: @site) |> Jason.encode!() %>"
+    data-show-cities="<%= Application.get_env(:plausible, :show_cities) %>"
+  >
   </div>
   <div id="modal_root"></div>
   <%= if !@conn.assigns[:current_user] && @conn.assigns[:demo] do %>
