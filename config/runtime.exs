@@ -200,6 +200,11 @@ log_level =
   |> get_var_from_path_or_env("LOG_LEVEL", "warn")
   |> String.to_existing_atom()
 
+show_cities =
+  config_dir
+  |> get_var_from_path_or_env("SHOW_CITIES", "false")
+  |> String.to_existing_atom()
+
 custom_script_name =
   config_dir
   |> get_var_from_path_or_env("CUSTOM_SCRIPT_NAME", "script")
@@ -233,7 +238,8 @@ config :plausible,
   site_limit_exempt: site_limit_exempt,
   is_selfhost: is_selfhost,
   custom_script_name: custom_script_name,
-  log_failed_login_attempts: log_failed_login_attempts
+  log_failed_login_attempts: log_failed_login_attempts,
+  show_cities: show_cities
 
 config :plausible, :selfhost,
   enable_email_verification: enable_email_verification,
