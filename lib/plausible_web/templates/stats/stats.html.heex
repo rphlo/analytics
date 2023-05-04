@@ -42,6 +42,7 @@
     data-valid-intervals-by-period={
       Plausible.Stats.Interval.valid_by_period(site: @site) |> Jason.encode!()
     }
+    data-show-cities="<%= Application.get_env(:plausible, :show_cities) %>"
   >
   </div>
   <div id="modal_root"></div>
