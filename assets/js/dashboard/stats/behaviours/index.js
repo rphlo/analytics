@@ -332,7 +332,7 @@ export default function Behaviours(props) {
     }
   }
 
-  if (mode) {
+  if (mode && false) {
     return (
       <div className="items-start justify-between block w-full mt-6 md:flex">
         <div className="w-full p-4 bg-white rounded shadow-xl dark:bg-gray-825">
